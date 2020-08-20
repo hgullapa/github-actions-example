@@ -15,6 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - shell: bash
+    - name: login
       env:
         SUPER_SECRET: ${{ secrets.clientSecret }}
     - name: Set up Python 3.8
