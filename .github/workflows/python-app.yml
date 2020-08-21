@@ -7,11 +7,10 @@ on:
  push:
   
 env:
-        super_secret: ${{ secrets.clientSecret }}
+    super_secret: ${{ secrets.clientSecret }}
 jobs:
-
+  build:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
