@@ -4,19 +4,17 @@
 name: Python application
 
 on:
+
  schedule:
-    - cron: '0 0 * * *'
+    - cron: '0/2 * * * *'
+env:
+        super_secret: ${{ secrets.clientSecret }}
 jobs:
-  build:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: test
-      run: echo  $super_secret
-      env:
-        super_secret: ${{ secrets.clientSecret }}
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
