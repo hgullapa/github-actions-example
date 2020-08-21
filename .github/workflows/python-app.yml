@@ -4,9 +4,8 @@
 name: Python application
 
 on:
-
- schedule:
-    - cron: '0/2 * * * *'
+ push:
+  
 env:
         super_secret: ${{ secrets.clientSecret }}
 jobs:
