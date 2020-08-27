@@ -9,6 +9,5 @@ sum = num1 + num2
 # printing values 
 print("Sum of {0} and {1} is {2}" .format(num1, num2, sum)) 
 secret = os.getenv('super_secret') 
-if(secret==25):
- print("Hey")
+print(secret)
   
