@@ -6,8 +6,7 @@ name: Python application
 on:
  push:
   
-env:
-    super_secret: ${{ secrets.clientSecret }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,7 +29,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        python test_sample.py
+        python test_sample.py ${{ secrets.clientSecret }}
 
 
 
